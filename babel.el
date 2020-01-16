@@ -404,6 +404,7 @@ function, not available on other emacsen"
 	     (tmp (url-retrieve-synchronously url)))
 	(unless (cadr (url-insert tmp))
 	  (mm-decode-coding-region (point-min) (point-max) 'utf-8))
+        (insert (buffer-substring (point) (point-max)))
 	(kill-buffer tmp)))))
 
 (defun babel-wash-regex (regex)
