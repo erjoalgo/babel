@@ -7,18 +7,18 @@
 		  (babel-work "network" "en" "de" fetcher washer))
 		"Netzwerk"))
 
-'(deftest "test-babelfish"
+(deftest "test-babelfish"
   (assert-equal (let* ((fetcher 'babel-fish-fetch)
 		       (washer 'babel-fish-wash))
 		  (babel-work "network" "en" "de" fetcher washer))
 		"Netz"))
 
-'(deftest "test-free"
+(deftest "test-free"
   (assert-equal (let* ((fetcher 'babel-free-fetch)
 		       (washer 'babel-free-wash))
 		  (babel-work "network" "en" "de" fetcher washer)) "Netz"))
 
-'(deftest "test-apertium"
+(deftest "test-apertium"
   (assert-equal (let* ((fetcher 'babel-apertium-fetch)
 		       (washer 'babel-apertium-wash))
 		  (babel-work "network" "en" "es" fetcher washer)) "Red"))
